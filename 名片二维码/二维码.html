@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>我的活码二维码</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      max-width: 360px;
+      width: 90%;
+    }
+    h1 { font-size: 20px; margin-bottom: 6px; color: #111; }
+    p  { font-size: 13px; color: #888; margin-bottom: 28px; }
+    #qrcode { display: flex; justify-content: center; margin-bottom: 24px; }
+    #qrcode img, #qrcode canvas { border-radius: 8px; }
+    .url {
+      font-size: 12px;
+      color: #555;
+      background: #f5f5f5;
+      border-radius: 8px;
+      padding: 10px 14px;
+      word-break: break-all;
+    }
+    .tip {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+    .save-btn {
+      margin-top: 20px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 28px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .save-btn:hover { background: #333; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>我的活码</h1>
+    <p>扫码即可跳转到设定的地址</p>
+    <div id="qrcode"></div>
+    <div class="url" id="url-text">https://solviktech.github.io/go</div>
+    <div class="tip">⚠️ 请在 GitHub 建好仓库后再保存此二维码</div>
+    <button class="save-btn" onclick="saveQR()">保存二维码图片</button>
+  </div>
+
+  <script>
+    var url = "https://solviktech.github.io/go";
+    var qr = new QRCode(document.getElementById("qrcode"), {
+      text: url,
+      width: 240,
+      height: 240,
+      colorDark: "#111111",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+
+    function saveQR() {
+      setTimeout(function() {
+        var canvas = document.querySelector("#qrcode canvas");
+        if (canvas) {
+          var a = document.createElement("a");
+          a.href = canvas.toDataURL("image/png");
+          a.download = "我的活码.png";
+          a.click();
+        } else {
+          var img = document.querySelector("#qrcode img");
+          if (img) {
+            var a = document.createElement("a");
+            a.href = img.src;
+            a.download = "我的活码.png";
+            a.click();
+          }
+        }
+      }, 500);
+    }
+  </script>
+</body>
+</html>

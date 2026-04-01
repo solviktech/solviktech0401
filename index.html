@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SOLVIKTECH – Cross-border business solutions connecting China with the Middle East through sourcing, execution, and practical market understanding." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="SOLVIKTECH | China Sourcing & Market Entry for the Middle East" />
+  <meta property="og:description" content="We help businesses source from China, build practical projects, and enter new markets with stronger local relevance and clearer coordination." />
+  <meta property="og:type" content="website" />
+  <title>SOLVIKTECH | China Sourcing, Business Execution & Market Entry</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+============================================================ -->
+<header id="header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Brand -->
+      <a href="index.html" class="brand" aria-label="SOLVIKTECH – Home">
+        <span class="brand-logo">
+          <img src="images/logo-solviktech-01.jpg" alt="SOLVIKTECH Logo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <span class="brand-logo-fallback">ST</span>
+        </span>
+        SOLVIKTECH
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#hero"     data-i18n="nav.home"     class="active">Home</a>
+        <a href="#services" data-i18n="nav.services"            >Services</a>
+        <a href="#projects" data-i18n="nav.projects"            >Projects</a>
+        <a href="#about"    data-i18n="nav.about"               >About</a>
+        <a href="#contact"  data-i18n="nav.contact"             >Contact</a>
+      </nav>
+
+      <!-- Header right -->
+      <div class="header-right">
+        <div class="lang-switch" role="group" aria-label="Language selection">
+          <button class="lang-btn active" data-lang-btn="en"
+                  onclick="setLang('en')" aria-label="Switch to English">EN</button>
+          <button class="lang-btn" data-lang-btn="ar"
+                  onclick="setLang('ar')" aria-label="Switch to Arabic">AR</button>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+  <a href="#hero"     data-i18n="nav.home"    >Home</a>
+  <a href="#services" data-i18n="nav.services">Services</a>
+  <a href="#projects" data-i18n="nav.projects">Projects</a>
+  <a href="#about"    data-i18n="nav.about"   >About</a>
+  <a href="#contact"  data-i18n="nav.contact" >Contact</a>
+  <div class="mobile-lang lang-switch">
+    <button class="lang-btn active" data-lang-btn="en"
+            onclick="setLang('en');closeMobileNav()">EN</button>
+    <button class="lang-btn" data-lang-btn="ar"
+            onclick="setLang('ar');closeMobileNav()">AR</button>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     SECTION 1: HERO
+============================================================ -->
+<section id="hero" aria-labelledby="hero-heading">
+
+  <!-- Background video layer — lowest z-index -->
+  <video class="hero-video" aria-hidden="true"
+         autoplay muted loop playsinline
+         preload="auto"
+         poster="">
+    <source src="hero-bg.mp4" type="video/mp4">
+  </video>
+
+  <!-- Depth overlay -->
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <!-- Atmospheric ambient layers -->
+  <div class="hero-ambient" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+
+      <!-- Eyebrow -->
+      <p class="hero-eyebrow hero-enter hero-enter-1">
+        <span class="hero-eyebrow-line" aria-hidden="true"></span>
+        <span data-i18n="hero.label">Cross-Border Business Solutions</span>
+      </p>
+
+      <!-- H1 — two lines, second line visually stronger -->
+      <h1 id="hero-heading" class="hero-h1 hero-enter hero-enter-2">
+        <span class="hero-heading-desktop">
+          <span class="h1-line1" data-i18n="hero.h1_line1">Bridging China and the Middle East</span>
+          <span class="h1-line2" data-i18n="hero.h1_line2">Through Innovation &amp; Trust</span>
+        </span>
+        <span class="hero-heading-mobile">
+          <span class="h1-line1" data-i18n="hero.h1_line1a">Bridging China</span>
+          <span class="h1-line1" data-i18n="hero.h1_line1b">and the Middle East</span>
+          <span class="h1-line2" data-i18n="hero.h1_line2">Through Innovation &amp; Trust</span>
+        </span>
+      </h1>
+
+      <!-- Subtitle — two short lines -->
+      <p class="hero-sub hero-enter hero-enter-3">
+        <span data-i18n="hero.sub1">From sourcing to execution.</span><br>
+        <span data-i18n="hero.sub2">Built for real market conditions.</span>
+      </p>
+
+      <!-- Bullets -->
+      <ul class="hero-bullets hero-enter hero-enter-4" aria-label="Key capabilities">
+        <li class="hero-bullet">
+          <span class="hero-bullet-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.bullet1">Practical sourcing. Clear coordination.</span>
+        </li>
+        <li class="hero-bullet">
+          <span class="hero-bullet-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.bullet2">Project execution from plan to delivery.</span>
+        </li>
+        <li class="hero-bullet">
+          <span class="hero-bullet-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.bullet3">Market entry built on real local insight.</span>
+        </li>
+      </ul>
+
+      <!-- CTAs -->
+      <div class="hero-actions hero-enter hero-enter-5">
+        <a href="#contact" class="btn btn-primary">
+          <span data-i18n="hero.cta">Contact Us</span>
+        </a>
+        <a href="#services" class="btn btn-outline">
+          <span data-i18n="hero.cta2">Our Services</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll hero-enter hero-enter-6" aria-hidden="true">
+    <span class="hero-scroll-label" data-i18n="hero.scroll">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     SECTION 2: CORE SERVICES
+============================================================ -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+
+    <header class="section-header reveal">
+      <div class="label-tag" data-i18n="services.sectionLabel">What We Offer</div>
+      <h2 id="services-heading" data-i18n="services.title">What We Help You Do</h2>
+      <p class="section-intro" data-i18n="services.intro">
+        From sourcing products to launching projects and adapting to new markets, we support businesses across multiple stages of cross-border growth.
+      </p>
+    </header>
+
+    <div class="services-grid">
+
+      <!-- Service 01: Sourcing -->
+      <article class="service-card sc-1 reveal d1">
+        <a href="service-sourcing.html" class="card-overlay-link" aria-label="Explore sourcing service" tabindex="-1"></a>
+        <div class="svc-bg" aria-hidden="true">
+          <img src="images/service-bg-01.png.png" alt="" loading="lazy"
+               onerror="this.style.display='none'" />
+        </div>
+        <span class="svc-label" data-i18n="services.s1_label">Source Products from China</span>
+        <h3 data-i18n="services.s1_title">Reliable sourcing with better coordination</h3>
+        <p data-i18n="services.s1_desc">
+          We help businesses source products from China with more clarity, stronger supplier communication, and practical delivery support.
+        </p>
+        <ul class="svc-bullets" aria-label="Service features">
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s1_b1">Supplier coordination</span>
+          </li>
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s1_b2">Product and option comparison</span>
+          </li>
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s1_b3">Export and delivery support</span>
+          </li>
+        </ul>
+        <a href="service-sourcing.html" class="svc-cta">
+          <span data-i18n="services.s1_btn">Explore More</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <!-- Service 02: Project -->
+      <article class="service-card sc-2 reveal d2">
+        <a href="service-project-setup.html" class="card-overlay-link" aria-label="Explore project setup service" tabindex="-1"></a>
+        <div class="svc-bg" aria-hidden="true">
+          <img src="images/service-bg-02.png" alt="" loading="lazy"
+               onerror="this.style.display='none'" />
+        </div>
+        <span class="svc-label" data-i18n="services.s2_label">Build and Launch Your Project</span>
+        <h3 data-i18n="services.s2_title">From idea to workable execution</h3>
+        <p data-i18n="services.s2_desc">
+          We help shape business ideas into executable projects by aligning products, systems, planning, and real operational needs.
+        </p>
+        <ul class="svc-bullets" aria-label="Service features">
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s2_b1">Project planning</span>
+          </li>
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s2_b2">Product and system selection</span>
+          </li>
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s2_b3">Setup and execution support</span>
+          </li>
+        </ul>
+        <a href="service-project-setup.html" class="svc-cta">
+          <span data-i18n="services.s2_btn">Explore More</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <!-- Service 03: Market Entry -->
+      <article class="service-card sc-3 reveal d3">
+        <a href="service-market-entry.html" class="card-overlay-link" aria-label="Explore market entry service" tabindex="-1"></a>
+        <div class="svc-bg" aria-hidden="true">
+          <img src="images/service-bg-03.png" alt="" loading="lazy"
+               onerror="this.style.display='none'" />
+        </div>
+        <span class="svc-label" data-i18n="services.s3_label">Enter and Grow in New Markets</span>
+        <h3 data-i18n="services.s3_title">Localization with market-aware guidance</h3>
+        <p data-i18n="services.s3_desc">
+          We support businesses entering Saudi Arabia and the wider Middle East with practical strategy, localization thinking, and market-facing coordination.
+        </p>
+        <ul class="svc-bullets" aria-label="Service features">
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s3_b1">Market entry support</span>
+          </li>
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s3_b2">Localization strategy</span>
+          </li>
+          <li class="svc-bullet">
+            <span class="svc-bullet-dot" aria-hidden="true"></span>
+            <span data-i18n="services.s3_b3">Cross-cultural business guidance</span>
+          </li>
+        </ul>
+        <a href="service-market-entry.html" class="svc-cta">
+          <span data-i18n="services.s3_btn">Explore More</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 3: SELECTED PROJECTS
+============================================================ -->
+<section id="projects" aria-labelledby="projects-heading">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+
+    <header class="section-header reveal">
+      <div class="label-tag" data-i18n="projects.sectionLabel">Our Work</div>
+      <h2 id="projects-heading" data-i18n="projects.title">Selected Projects</h2>
+      <p class="section-intro" data-i18n="projects.intro">
+        Different industries, one consistent strength: turning cross-border ideas into practical and executable results.
+      </p>
+    </header>
+
+    <div class="projects-grid">
+
+      <!-- Project 01 -->
+      <article class="project-card reveal d1">
+        <a href="project-central-kitchen.html" class="card-overlay-link" aria-label="View Central Kitchen Project" tabindex="-1"></a>
+        <div class="project-img-wrap">
+          <img src="images/home-case-01.jpg"
+               alt="Central Kitchen Project — Sourcing and system planning"
+               loading="lazy"
+               onerror="this.style.display='none'" />
+          <div class="project-img-placeholder" aria-hidden="true">home-case-01.jpg</div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag" data-i18n="projects.p1_tag">Sourcing &amp; System Planning</span>
+          <h3 data-i18n="projects.p1_title">Central Kitchen Project</h3>
+          <p data-i18n="projects.p1_desc">Equipment sourcing, system planning, and execution for a full food production setup.</p>
+          <a href="project-central-kitchen.html" class="btn-ghost">
+            <span data-i18n="projects.p1_btn">View Project</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 02 -->
+      <article class="project-card reveal d2">
+        <a href="project-aliendl.html" class="card-overlay-link" aria-label="View Aliendl Plush Toy IP project" tabindex="-1"></a>
+        <div class="project-img-wrap">
+          <img src="images/home-case-02.jpg"
+               alt="Aliendl Plush Toy IP — Product and brand execution"
+               loading="lazy"
+               onerror="this.style.display='none'" />
+          <div class="project-img-placeholder" aria-hidden="true">home-case-02.jpg</div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag" data-i18n="projects.p2_tag">Product + Brand Execution</span>
+          <h3 data-i18n="projects.p2_title">Aliendl Plush Toy IP</h3>
+          <p data-i18n="projects.p2_desc">From concept to product system — brand direction and online-to-offline implementation.</p>
+          <a href="project-aliendl.html" class="btn-ghost">
+            <span data-i18n="projects.p2_btn">View Project</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 03 -->
+      <article class="project-card reveal d3">
+        <a href="project-dragon-umrah.html" class="card-overlay-link" aria-label="View Dragon Umrah project" tabindex="-1"></a>
+        <div class="project-img-wrap">
+          <img src="images/home-case-03.jpg"
+               alt="Dragon Umrah — Service localization"
+               loading="lazy"
+               onerror="this.style.display='none'" />
+          <div class="project-img-placeholder" aria-hidden="true">home-case-03.jpg</div>
+        </div>
+        <div class="project-body">
+          <span class="project-tag" data-i18n="projects.p3_tag">Service Localization</span>
+          <h3 data-i18n="projects.p3_title">Dragon Umrah</h3>
+          <p data-i18n="projects.p3_desc">A localized Umrah service model built on coordination, user experience, and practical delivery.</p>
+          <a href="project-dragon-umrah.html" class="btn-ghost">
+            <span data-i18n="projects.p3_btn">View Project</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 4: HOW WE WORK
+============================================================ -->
+<section id="workflow" aria-labelledby="workflow-heading">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+
+    <header class="section-header centered reveal">
+      <div class="label-tag" data-i18n="workflow.sectionLabel">Our Process</div>
+      <h2 id="workflow-heading" data-i18n="workflow.title">How We Work</h2>
+      <p class="section-intro" data-i18n="workflow.intro">
+        We do not simply move from request to delivery. We first clarify what is realistic, what is necessary, and what works best in your actual market context.
+      </p>
+    </header>
+
+    <!-- Desktop: horizontal timeline -->
+    <div class="workflow-desktop" aria-label="5-step process">
+      <div class="workflow-track" aria-hidden="true">
+        <div class="workflow-track-fill" id="workflowFill"></div>
+      </div>
+
+      <div class="workflow-step reveal d1">
+        <div class="step-node" aria-hidden="true">01</div>
+        <div class="step-text">
+          <h4 data-i18n="workflow.s1_title">Clarify the Need</h4>
+          <p data-i18n="workflow.s1_desc">We understand what you want to source, build, improve, or explore.</p>
+        </div>
+      </div>
+
+      <div class="workflow-step reveal d2">
+        <div class="step-node" aria-hidden="true">02</div>
+        <div class="step-text">
+          <h4 data-i18n="workflow.s2_title">Evaluate the Direction</h4>
+          <p data-i18n="workflow.s2_desc">We review workable options, likely constraints, and the most practical next step.</p>
+        </div>
+      </div>
+
+      <div class="workflow-step reveal d3">
+        <div class="step-node" aria-hidden="true">03</div>
+        <div class="step-text">
+          <h4 data-i18n="workflow.s3_title">Build the Plan</h4>
+          <p data-i18n="workflow.s3_desc">We prepare a clear direction for sourcing, structure, or execution.</p>
+        </div>
+      </div>
+
+      <div class="workflow-step reveal d4">
+        <div class="step-node" aria-hidden="true">04</div>
+        <div class="step-text">
+          <h4 data-i18n="workflow.s4_title">Coordinate and Deliver</h4>
+          <p data-i18n="workflow.s4_desc">We move the project into action through sourcing, planning, or implementation support.</p>
+        </div>
+      </div>
+
+      <div class="workflow-step reveal d5">
+        <div class="step-node" aria-hidden="true">05</div>
+        <div class="step-text">
+          <h4 data-i18n="workflow.s5_title">Support the Next Stage</h4>
+          <p data-i18n="workflow.s5_desc">We continue with follow-up support, adjustments, and additional guidance after delivery.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile: vertical timeline -->
+    <div class="workflow-mobile" aria-label="5-step process">
+      <div class="workflow-step-m reveal">
+        <div class="step-node-m" aria-hidden="true">01</div>
+        <div class="step-body-m">
+          <h4 data-i18n="workflow.s1_title">Clarify the Need</h4>
+          <p data-i18n="workflow.s1_desc">We understand what you want to source, build, improve, or explore.</p>
+        </div>
+      </div>
+      <div class="workflow-step-m reveal d1">
+        <div class="step-node-m" aria-hidden="true">02</div>
+        <div class="step-body-m">
+          <h4 data-i18n="workflow.s2_title">Evaluate the Direction</h4>
+          <p data-i18n="workflow.s2_desc">We review workable options, likely constraints, and the most practical next step.</p>
+        </div>
+      </div>
+      <div class="workflow-step-m reveal d2">
+        <div class="step-node-m" aria-hidden="true">03</div>
+        <div class="step-body-m">
+          <h4 data-i18n="workflow.s3_title">Build the Plan</h4>
+          <p data-i18n="workflow.s3_desc">We prepare a clear direction for sourcing, structure, or execution.</p>
+        </div>
+      </div>
+      <div class="workflow-step-m reveal d3">
+        <div class="step-node-m" aria-hidden="true">04</div>
+        <div class="step-body-m">
+          <h4 data-i18n="workflow.s4_title">Coordinate and Deliver</h4>
+          <p data-i18n="workflow.s4_desc">We move the project into action through sourcing, planning, or implementation support.</p>
+        </div>
+      </div>
+      <div class="workflow-step-m reveal d4">
+        <div class="step-node-m" aria-hidden="true">05</div>
+        <div class="step-body-m">
+          <h4 data-i18n="workflow.s5_title">Support the Next Stage</h4>
+          <p data-i18n="workflow.s5_desc">We continue with follow-up support, adjustments, and guidance after delivery.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 5: ABOUT
+============================================================ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Image column -->
+      <div class="about-img-col reveal">
+        <div class="about-img-frame">
+          <img src="images/home-about-profile-01.jpg"
+               alt="SOLVIKTECH – Ahmed and Dylan, company representatives based in Jeddah"
+               loading="lazy"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="about-img-placeholder" aria-hidden="true">home-about-profile-01.jpg</div>
+        </div>
+      </div>
+
+      <!-- Content column -->
+      <div class="about-content">
+
+        <div class="reveal">
+          <div class="label-tag" data-i18n="about.sectionLabel">Who We Are</div>
+          <h2 id="about-heading" data-i18n="about.title">About SOLVIKTECH</h2>
+        </div>
+
+        <div class="about-intro reveal d1">
+          <p data-i18n="about.p1">
+            SOLVIKTECH is a cross-border solutions company built on a simple principle: real execution beats strategy on paper. We bridge China and the Middle East — connecting supplier networks, coordinating projects, and building market presence with people who understand both sides.
+          </p>
+          <p data-i18n="about.p2">
+            Founded by professionals with backgrounds in financial engineering and international business, we bring structured thinking and local knowledge to every engagement. Whether you are sourcing a product, launching a project, or entering a new market — we help you move with clarity and confidence.
+          </p>
+        </div>
+
+        <!-- Representative card -->
+        <div class="rep-card reveal d2" aria-label="Company representative">
+          <div class="rep-avatar" aria-hidden="true">A/D</div>
+          <div class="rep-info">
+            <div class="rep-name" data-i18n="about.rep_name">Ahmed / Dylan</div>
+            <div class="rep-role" data-i18n="about.rep_role">Company Representative</div>
+            <div class="rep-location" data-i18n="about.rep_location">Based in Jeddah</div>
+            <div class="rep-details">
+              <div class="rep-detail" data-i18n="about.rep_edu1">Bachelor in Financial Engineering</div>
+              <div class="rep-detail" data-i18n="about.rep_edu2">Master in International Business Management</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 6: CONTACT
+============================================================ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: text + channels -->
+      <div class="contact-left reveal">
+        <div>
+          <div class="label-tag" data-i18n="contact.sectionLabel">Get In Touch</div>
+          <h2 id="contact-heading" data-i18n="contact.title">Start the Conversation</h2>
+          <p class="section-intro" data-i18n="contact.intro">
+            Tell us what you need, what stage you are at, and where you want to go next.
+          </p>
+        </div>
+        <p class="form-guidance" data-i18n="contact.form_guidance">A few details help us respond faster. No commitment required.</p>
+        <div class="contact-channels">
+          <div class="channel-item channel-primary">
+            <a href="https://wa.me/966548445194?text=Hello%2C%20I%20found%20you%20through%20SOLVIKTECH%20and%20would%20like%20to%20get%20in%20touch."
+               class="channel-link" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+              <div class="ch-icon" aria-hidden="true">💬</div>
+              <div>
+                <div class="ch-label" data-i18n="contact.ch1_label">WhatsApp</div>
+                <div class="ch-val"   data-i18n="contact.ch1_val">+966 548 445 194</div>
+                <div class="ch-sub"   data-i18n="contact.ch1_sub">Tap to open a direct conversation</div>
+              </div>
+            </a>
+          </div>
+          <div class="channel-item">
+            <a href="mailto:liuditata@gmail.com" class="channel-link" aria-label="Send us an email">
+              <div class="ch-icon" aria-hidden="true">✉️</div>
+              <div>
+                <div class="ch-label" data-i18n="contact.ch2_label">Email</div>
+                <div class="ch-val"   data-i18n="contact.ch2_val">liuditata@gmail.com</div>
+              </div>
+            </a>
+          </div>
+          <div class="channel-item">
+            <a href="https://www.instagram.com/dragonumrah?igsh=MXJ1bzkwMW82eTduaQ=="
+               class="channel-link" target="_blank" rel="noopener" aria-label="Visit our Instagram">
+              <div class="ch-icon" aria-hidden="true">📸</div>
+              <div>
+                <div class="ch-label" data-i18n="contact.ch3_label">Instagram</div>
+                <div class="ch-val"   data-i18n="contact.ch3_val">Explore our work</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="reveal d2">
+        <form class="contact-form" id="contactForm"
+              action="https://formsubmit.co/liuditata@gmail.com"
+              method="POST">
+
+          <input type="hidden" name="_subject"  value="New Inquiry — SOLVIKTECH" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha"  value="false" />
+          <input type="hidden" name="_next"     value="https://www.solviktech.com/?sent=1" />
+          <!-- Honeypot spam trap — must stay empty -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName" data-i18n="contact.f_name">Full Name</label>
+              <input type="text" id="fullName" name="Full Name" required
+                     data-i18n-ph="contact.f_name_ph"
+                     placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label for="company" data-i18n="contact.f_company">Company Name</label>
+              <input type="text" id="company" name="Company Name"
+                     data-i18n-ph="contact.f_company_ph"
+                     placeholder="Your company" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactInfo" data-i18n="contact.f_contact">Email or WhatsApp</label>
+              <input type="text" id="contactInfo" name="Email or WhatsApp" required
+                     data-i18n-ph="contact.f_contact_ph"
+                     placeholder="Email or WhatsApp number" />
+            </div>
+            <div class="form-group">
+              <label for="country" data-i18n="contact.f_country">Country / Region</label>
+              <input type="text" id="country" name="Country / Region"
+                     data-i18n-ph="contact.f_country_ph"
+                     placeholder="Where are you based?" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="helpType" data-i18n="contact.f_help">What do you need help with?</label>
+            <select id="helpType" name="Help Needed"
+                    data-i18n-ph="contact.f_help_ph"
+                    data-i18n-opt="contact.f_h_opt1,contact.f_h_opt2,contact.f_h_opt3,contact.f_h_opt4,contact.f_h_opt5">
+              <option value="" data-i18n="contact.f_help_ph">Select an option</option>
+              <option value="sourcing"  data-opt data-i18n="contact.f_h_opt1">Product Sourcing</option>
+              <option value="project"   data-opt data-i18n="contact.f_h_opt2">Business Project Setup</option>
+              <option value="strategy"  data-opt data-i18n="contact.f_h_opt3">Market Strategy / Localization</option>
+              <option value="service"   data-opt data-i18n="contact.f_h_opt4">Service Business Planning</option>
+              <option value="other"     data-opt data-i18n="contact.f_h_opt5">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="stage" data-i18n="contact.f_stage">What stage are you at?</label>
+            <select id="stage" name="Stage"
+                    data-i18n-ph="contact.f_stage_ph"
+                    data-i18n-opt="contact.f_s_opt1,contact.f_s_opt2,contact.f_s_opt3,contact.f_s_opt4,contact.f_s_opt5">
+              <option value="" data-i18n="contact.f_stage_ph">Select your stage</option>
+              <option value="exploring"      data-opt data-i18n="contact.f_s_opt1">Just exploring options</option>
+              <option value="sourcing-part"  data-opt data-i18n="contact.f_s_opt2">Looking for a sourcing partner</option>
+              <option value="ready"          data-opt data-i18n="contact.f_s_opt3">Ready to execute</option>
+              <option value="strategic"      data-opt data-i18n="contact.f_s_opt4">Need strategic guidance</option>
+              <option value="existing"       data-opt data-i18n="contact.f_s_opt5">Need support for an existing business</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" data-i18n="contact.f_message">Tell us briefly about your project or requirement</label>
+            <textarea id="message" name="Project / Requirement"
+                      data-i18n-ph="contact.f_message_ph"
+                      placeholder="Describe your project, requirement, or question..."></textarea>
+          </div>
+
+          <!-- Success message -->
+          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+            <span data-i18n="contact.f_success">Message sent. We'll be in touch within 24 hours.</span>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span data-i18n="contact.f_submit">Send Inquiry</span>
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 7: FAQ
+============================================================ -->
+<section id="faq" aria-labelledby="faq-heading">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+
+    <header class="section-header centered reveal">
+      <div class="label-tag" data-i18n="faq.sectionLabel">FAQ</div>
+      <h2 id="faq-heading" data-i18n="faq.title">Frequently Asked Questions</h2>
+    </header>
+
+    <div class="faq-wrap reveal d1">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a1">
+          <span data-i18n="faq.q1">Can you help source products from China for Saudi Arabia and the Middle East?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-a1" role="region">
+          <p class="faq-answer" data-i18n="faq.a1">Yes. We support sourcing with supplier coordination, practical delivery logic, and attention to local market requirements.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a2">
+          <span data-i18n="faq.q2">Do you only help with sourcing, or can you support full project setup as well?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-a2" role="region">
+          <p class="faq-answer" data-i18n="faq.a2">We do more than sourcing. We also support project planning, system selection, and practical setup thinking for businesses that need a fuller solution.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a3">
+          <span data-i18n="faq.q3">What types of products or projects do you usually work on?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-a3" role="region">
+          <p class="faq-answer" data-i18n="faq.a3">We work across multiple categories, including equipment, consumer products, service-based business models, and projects that need both sourcing and execution support.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a4">
+          <span data-i18n="faq.q4">Can you help adapt a business idea to the Saudi or Middle Eastern market?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-a4" role="region">
+          <p class="faq-answer" data-i18n="faq.a4">Yes. We help businesses adjust to local expectations, operating conditions, and market-facing realities.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a5">
+          <span data-i18n="faq.q5">How do you reduce risk across different countries and suppliers?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-a5" role="region">
+          <p class="faq-answer" data-i18n="faq.a5">We reduce risk by clarifying needs early, evaluating realistic options, and coordinating only workable next steps.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a6">
+          <span data-i18n="faq.q6">Do you provide support after the first stage is completed?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-body" id="faq-a6" role="region">
+          <p class="faq-answer" data-i18n="faq.a6">Yes. We continue to support follow-up questions, refinement needs, and additional steps after the initial stage.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 8: INSIGHTS & UPDATES
+============================================================ -->
+<section id="insights" aria-labelledby="insights-heading">
+  <div class="section-divider" aria-hidden="true"></div>
+  <div class="container">
+
+    <header class="section-header reveal">
+      <div class="label-tag" data-i18n="insights.sectionLabel">Insights &amp; Updates</div>
+      <h2 id="insights-heading" data-i18n="insights.title">Insights &amp; Updates</h2>
+      <p class="section-intro" data-i18n="insights.intro">
+        Practical content on sourcing, market entry, business setup, and cross-border execution across China, Saudi Arabia, and the wider Middle East.
+      </p>
+    </header>
+
+    <!-- Insights Carousel -->
+    <div class="insights-carousel reveal" aria-label="Insights carousel" role="region">
+
+      <button class="carousel-btn carousel-prev" aria-label="Previous insight">
+        <span aria-hidden="true">←</span>
+      </button>
+
+      <div class="carousel-track-wrap">
+        <div class="carousel-track" id="insightsTrack">
+
+          <!-- Slide 01 -->
+          <article class="carousel-slide" data-state="center" data-index="0">
+            <div class="article-img">
+              <img src="images/home-news-01.jpg"
+                   alt="How to Source More Reliably from China for the Saudi Market"
+                   loading="lazy"
+                   onerror="this.style.display='none'" />
+              <div class="article-img-placeholder" aria-hidden="true">home-news-01.jpg</div>
+            </div>
+            <div class="article-body">
+              <h3 data-i18n="insights.a1_title">How to Source More Reliably from China for the Saudi Market</h3>
+              <p data-i18n="insights.a1_summary">
+                A practical overview of supplier selection, option comparison, and common mistakes businesses should avoid when moving products into Saudi Arabia.
+              </p>
+              <a href="/insights/article-01" class="btn-ghost">
+                <span data-i18n="insights.a1_btn">Read More</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Slide 02 -->
+          <article class="carousel-slide" data-state="right" data-index="1">
+            <div class="article-img">
+              <img src="images/home-news-02.jpg"
+                   alt="What Businesses Should Clarify Before Starting a Project in Saudi Arabia"
+                   loading="lazy"
+                   onerror="this.style.display='none'" />
+              <div class="article-img-placeholder" aria-hidden="true">home-news-02.jpg</div>
+            </div>
+            <div class="article-body">
+              <h3 data-i18n="insights.a2_title">What Businesses Should Clarify Before Starting a Project in Saudi Arabia</h3>
+              <p data-i18n="insights.a2_summary">
+                A closer look at market fit, operational planning, and execution logic before launching a project in the Kingdom.
+              </p>
+              <a href="/insights/article-02" class="btn-ghost">
+                <span data-i18n="insights.a2_btn">Read More</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Slide 03 -->
+          <article class="carousel-slide" data-state="left" data-index="2">
+            <div class="article-img">
+              <img src="images/home-news-03.jpg"
+                   alt="Why Localization Matters More Than Price in Cross-Border Business"
+                   loading="lazy"
+                   onerror="this.style.display='none'" />
+              <div class="article-img-placeholder" aria-hidden="true">home-news-03.jpg</div>
+            </div>
+            <div class="article-body">
+              <h3 data-i18n="insights.a3_title">Why Localization Matters More Than Price in Cross-Border Business</h3>
+              <p data-i18n="insights.a3_summary">
+                A short insight into why local understanding, user expectations, and execution quality often matter more than low price alone.
+              </p>
+              <a href="/insights/article-03" class="btn-ghost">
+                <span data-i18n="insights.a3_btn">Read More</span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <button class="carousel-btn carousel-next" aria-label="Next insight">
+        <span aria-hidden="true">→</span>
+      </button>
+
+      <!-- Dots -->
+      <div class="carousel-dots" role="tablist" aria-label="Slide navigation">
+        <button class="carousel-dot active" role="tab" aria-selected="true"  data-dot="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot"        role="tab" aria-selected="false" data-dot="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot"        role="tab" aria-selected="false" data-dot="2" aria-label="Slide 3"></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SECTION 9: FOOTER
+============================================================ -->
+<footer id="footer" role="contentinfo">
+
+  <div class="container">
+    <div class="footer-main">
+
+      <!-- Services -->
+      <div class="footer-col">
+        <h5 data-i18n="footer.col_services_title">Services</h5>
+        <ul>
+          <li><a href="service-sourcing.html"      data-i18n="footer.svc_l1">Sourcing from China</a></li>
+          <li><a href="service-project-setup.html" data-i18n="footer.svc_l2">Business Project Setup</a></li>
+          <li><a href="service-market-entry.html"  data-i18n="footer.svc_l3">Market Strategy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h5 data-i18n="footer.col_contact_title">Contact</h5>
+        <div class="footer-contact-list">
+          <a href="mailto:liuditata@gmail.com?subject=Inquiry%20from%20SOLVIKTECH%20Website&body=Hello%2C%0AI'm%20contacting%20you%20through%20the%20SOLVIKTECH%20website.%0AI'd%20like%20to%20learn%20more%20about%20your%20services."
+             class="footer-contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <span data-i18n="footer.contact_email">liuditata@gmail.com</span>
+          </a>
+          <a href="https://wa.me/966548445194?text=Hello%2C%20I'm%20reaching%20out%20from%20the%20SOLVIKTECH%20website.%20I'd%20like%20to%20inquire%20about%20your%20services."
+             class="footer-contact-item" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+            <span data-i18n="footer.contact_wa">+966 548445194</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scrolling text banner -->
+  <div class="footer-marquee-strip">
+    <div class="footer-marquee-track" aria-hidden="true">
+      <!-- Set A -->
+      <span class="footer-marquee-text" data-i18n="footer.marquee_text">We welcome collaboration — always ready to connect, support your business, and bring practical value to your next step.</span>
+      <span class="footer-marquee-dot">·</span>
+      <!-- Set B (duplicate for seamless loop) -->
+      <span class="footer-marquee-text" data-i18n="footer.marquee_text">We welcome collaboration — always ready to connect, support your business, and bring practical value to your next step.</span>
+      <span class="footer-marquee-dot">·</span>
+    </div>
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy" data-i18n="footer.copyright">© 2025 SOLVIKTECH. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="/terms"   data-i18n="footer.terms"  >Terms of Use</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+<!-- Scripts: i18n must load before main -->
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
