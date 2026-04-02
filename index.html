@@ -54,11 +54,21 @@
         </div>
       </div>
 
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger"
-              aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- Mobile top actions -->
+      <div class="mobile-header-actions">
+        <div class="mobile-top-lang lang-switch" role="group" aria-label="Language selection">
+          <button class="lang-btn active" data-lang-btn="en"
+                  onclick="setLang('en')" aria-label="Switch to English">EN</button>
+          <button class="lang-btn" data-lang-btn="ar"
+                  onclick="setLang('ar')" aria-label="Switch to Arabic">AR</button>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger"
+                aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </div>
 </header>

@@ -327,6 +327,22 @@ html[lang="ar"] .btn-ghost:hover .arrow { transform: translateX(-4px); }
   gap: 18px;
 }
 
+.mobile-header-actions {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+html[lang="ar"] .mobile-header-actions {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.mobile-top-lang {
+  display: none;
+  flex-shrink: 0;
+}
+
 /* Language switch */
 .lang-switch {
   display: flex;
@@ -1854,6 +1870,8 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
   /* Header */
   .main-nav,
   .header-right { display: none; }
+  .mobile-header-actions { display: flex; }
+  .mobile-top-lang { display: flex; }
   .hamburger { display: flex; }
 
   /* Hero — mobile: stronger flat overlay for readability over video */
