@@ -1865,6 +1865,10 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
     text-align: center;
   }
   html[lang="ar"] .hero-content { text-align: center; }
+  .hero-h1 {
+    width: calc(100% + 16px);
+    margin-inline: -8px;
+  }
   .hero-eyebrow { justify-content: center; }
   .hero-eyebrow-line { display: none; }
   .hero-bullets { align-items: center; }
@@ -1876,7 +1880,10 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
   }
   html[lang="ar"] .hero-actions { flex-direction: column; }
   .hero-heading-desktop { display: none; }
-  .hero-heading-mobile { display: flex; }
+  .hero-heading-mobile {
+    display: flex;
+    align-items: center;
+  }
   .hero-actions .btn {
     width: min(52vw, 220px);
     justify-content: center;
