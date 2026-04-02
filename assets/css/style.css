@@ -1173,7 +1173,11 @@ html[lang="ar"] .workflow-step-m::before { left: auto; right: 17px; }
 }
 html[lang="ar"] .about-grid { direction: rtl; }
 
-.about-img-col { position: relative; }
+.about-img-col {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
 
 .about-img-frame {
   border-radius: var(--r-xl);
@@ -1225,6 +1229,8 @@ html[lang="ar"] .about-badge { right: auto; left: -18px; }
   display: flex;
   flex-direction: column;
   gap: 26px;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .about-intro p + p { margin-top: 12px; }
@@ -1240,6 +1246,9 @@ html[lang="ar"] .about-badge { right: auto; left: -18px; }
   gap: 16px;
   align-items: flex-start;
   transition: border-color var(--tr);
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
 }
 .rep-card:hover { border-color: var(--border-teal); }
 .rep-avatar {
@@ -1826,8 +1835,21 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
     grid-template-columns: 1fr;
     gap: 52px;
   }
-  .about-img-col { max-width: 400px; margin: 0 auto; }
+  .about-img-col {
+    grid-column: auto;
+    grid-row: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
   html[lang="ar"] .about-img-col { margin: 0 auto; }
+  .about-content {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .rep-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
   .about-img-frame { aspect-ratio: 3 / 2; }
   .about-badge { right: 0; bottom: -14px; }
   html[lang="ar"] .about-badge { left: 0; right: auto; }
@@ -1936,9 +1958,12 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
     display: block;
   }
   .about-content {
-    display: contents;
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    gap: 18px;
   }
-  .about-content > .rep-card {
+  .rep-card {
     grid-column: 2;
     grid-row: 1;
     width: 100%;
@@ -1946,20 +1971,11 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
     margin: 0;
     align-self: start;
   }
-  .about-content > .reveal:first-child {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-  .about-content > .about-intro {
-    grid-column: 1 / -1;
-    grid-row: 3;
-  }
   .about-badge { right: 8px; bottom: -12px; }
   html[lang="ar"] .about-badge { left: 8px; right: auto; }
   html[lang="ar"] .about-grid { direction: ltr; }
-  html[lang="ar"] .about-content > .reveal:first-child,
-  html[lang="ar"] .about-content > .about-intro,
-  html[lang="ar"] .about-content > .rep-card {
+  html[lang="ar"] .about-content,
+  html[lang="ar"] .rep-card {
     direction: rtl;
   }
 
