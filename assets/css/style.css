@@ -1232,6 +1232,17 @@ html[lang="ar"] .about-badge { right: auto; left: -18px; }
   grid-column: 2;
   grid-row: 1;
 }
+.about-person-card-mobile { display: none; }
+.about-person-card-mobile-frame {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+.about-person-card-mobile-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 .about-intro p + p { margin-top: 12px; }
 .about-intro p { font-size: 0.95rem; line-height: 1.82; }
@@ -1937,45 +1948,57 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
 
   /* About */
   .about-grid {
-    grid-template-columns: 104px minmax(0, 1fr);
-    gap: 18px 16px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: stretch;
   }
-  .about-img-col {
-    grid-column: 1;
-    grid-row: 1;
-    max-width: 104px;
-    margin: 0;
+  .about-img-col,
+  .rep-card { display: none; }
+  .about-person-card-mobile {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--r-md);
+    padding: 16px;
+  }
+  .about-person-card-mobile-media {
+    width: 96px;
     align-self: start;
   }
-  .about-img-frame {
-    aspect-ratio: auto;
+  .about-person-card-mobile-copy {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
-  .about-img-frame > img[src="images/home-about-profile-01.jpg"] {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
+  .about-person-card-mobile-copy .rep-details {
+    margin-top: 8px;
   }
   .about-content {
     display: flex;
-    grid-column: 1 / -1;
-    grid-row: 2;
     gap: 18px;
-  }
-  .rep-card {
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    align-self: start;
+    grid-column: auto;
+    grid-row: auto;
   }
   .about-badge { right: 8px; bottom: -12px; }
   html[lang="ar"] .about-badge { left: 8px; right: auto; }
-  html[lang="ar"] .about-grid { direction: ltr; }
+  html[lang="ar"] .about-grid { direction: rtl; }
   html[lang="ar"] .about-content,
-  html[lang="ar"] .rep-card {
+  html[lang="ar"] .about-person-card-mobile {
+    direction: rtl;
+  }
+  html[lang="ar"] .about-person-card-mobile {
+    grid-template-columns: minmax(0, 1fr) 96px;
+  }
+  html[lang="ar"] .about-person-card-mobile-copy,
+  html[lang="ar"] .about-person-card-mobile .rep-details {
+    align-items: flex-end;
+  }
+  html[lang="ar"] .about-content,
+  html[lang="ar"] .about-person-card-mobile {
     direction: rtl;
   }
 
