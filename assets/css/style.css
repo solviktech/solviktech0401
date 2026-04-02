@@ -1201,6 +1201,7 @@ html[lang="ar"] .about-grid { direction: rtl; }
   font-size: 0.78rem;
 }
 .about-img-frame img:not([style*="display: none"]) + .about-img-placeholder { display: none; }
+.about-person-card-mobile-frame img:not([style*="display: none"]) + .about-img-placeholder { display: none; }
 
 .about-badge {
   position: absolute;
