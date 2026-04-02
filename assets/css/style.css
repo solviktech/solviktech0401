@@ -1914,9 +1914,17 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
   .workflow-mobile   { display: flex; }
 
   /* About */
+  .about-grid {
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 18px 16px;
+    align-items: start;
+  }
   .about-img-col {
-    max-width: 320px;
-    margin: 0 auto;
+    grid-column: 1;
+    grid-row: 1;
+    max-width: 104px;
+    margin: 0;
+    align-self: start;
   }
   .about-img-frame {
     aspect-ratio: auto;
@@ -1925,18 +1933,35 @@ html[lang="ar"] .footer-bottom { flex-direction: row-reverse; }
     width: 100%;
     height: auto;
     object-fit: contain;
+    display: block;
   }
   .about-content {
-    gap: 18px;
+    display: contents;
   }
   .about-content > .rep-card {
-    order: -1;
+    grid-column: 2;
+    grid-row: 1;
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
+    align-self: start;
+  }
+  .about-content > .reveal:first-child {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .about-content > .about-intro {
+    grid-column: 1 / -1;
+    grid-row: 3;
   }
   .about-badge { right: 8px; bottom: -12px; }
   html[lang="ar"] .about-badge { left: 8px; right: auto; }
+  html[lang="ar"] .about-grid { direction: ltr; }
+  html[lang="ar"] .about-content > .reveal:first-child,
+  html[lang="ar"] .about-content > .about-intro,
+  html[lang="ar"] .about-content > .rep-card {
+    direction: rtl;
+  }
 
   /* Contact form rows */
   .form-row { grid-template-columns: 1fr; }
