@@ -1458,7 +1458,6 @@ html[lang="ar"] .form-group select {
 .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
 .form-success {
-  display: none;
   padding: 14px 18px;
   background: rgba(0,201,167,0.09);
   border: 1px solid var(--accent-teal-border);
@@ -1466,6 +1465,45 @@ html[lang="ar"] .form-group select {
   color: var(--accent-teal);
   font-size: 0.87rem;
   line-height: 1.5;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, max-height 0.2s ease, padding 0.2s ease, border-width 0.2s ease;
+}
+
+.form-error {
+  padding: 14px 18px;
+  background: rgba(224, 92, 92, 0.08);
+  border: 1px solid rgba(224, 92, 92, 0.26);
+  border-radius: var(--r-sm);
+  color: #f2a6a6;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-width: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease, max-height 0.2s ease, padding 0.2s ease, border-width 0.2s ease;
+}
+
+.form-success.is-visible,
+.form-error.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  max-height: 120px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-width: 1px;
 }
 
 /* ============================================================

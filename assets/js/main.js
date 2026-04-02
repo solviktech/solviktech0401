@@ -238,29 +238,57 @@
 
   /* ============================================================
      CONTACT FORM
-     Native POST — no AJAX. FormSubmit handles delivery directly.
+     AJAX submit — no redirect when JS is active.
   ============================================================ */
   function initContactForm() {
-    /* No interception needed — form submits natively to FormSubmit. */
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitLabel = document.getElementById('submitBtnLabel');
+    const successMsg = document.getElementById('formSuccess');
+    const errorMsg = document.getElementById('formError');
+    if (!form || !submitBtn || !submitLabel || !successMsg || !errorMsg) return;
 
-    /* Show on-page success banner when redirected back with ?sent=1 */
-    if (new URLSearchParams(window.location.search).get('sent') === '1') {
-      const successMsg = document.getElementById('formSuccess');
-      if (successMsg) {
-        const span = successMsg.querySelector('[data-i18n]');
-        if (span) {
-          span.textContent = currentLang === 'ar'
-            ? 'شكراً لك، تم إرسال استفسارك بنجاح.'
-            : 'Thank you, your inquiry has been sent.';
-        }
-        successMsg.style.display = 'block';
-      }
-      /* Scroll contact section into view */
-      const contact = document.getElementById('contact');
-      if (contact) contact.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      /* Clean the URL without reloading */
-      window.history.replaceState(null, '', window.location.pathname);
+    const defaultLabel = submitLabel.textContent.trim();
+    const sendingLabel = 'Sending...';
+    const endpoint = 'https://formsubmit.co/ajax/liuditata@gmail.com';
+
+    function setMessageState(type) {
+      successMsg.classList.toggle('is-visible', type === 'success');
+      errorMsg.classList.toggle('is-visible', type === 'error');
     }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      submitLabel.textContent = sendingLabel;
+      setMessageState(null);
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+
+        const result = await response.json().catch(() => ({}));
+        if (result.success !== 'true' && result.success !== true) {
+          throw new Error('Submission was not accepted');
+        }
+
+        form.reset();
+        setMessageState('success');
+      } catch (err) {
+        setMessageState('error');
+      } finally {
+        submitBtn.disabled = false;
+        submitLabel.textContent = defaultLabel;
+      }
+    });
   }
 
   /* ============================================================
