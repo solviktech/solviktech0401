@@ -73,6 +73,10 @@ const i18n = {
       p3_title:     "Dragon Umrah",
       p3_desc:      "A localized Umrah service model built on coordination, user experience, and practical delivery.",
       p3_btn:       "View Project",
+      p4_tag:       "Industrial Capability Presentation",
+      p4_title:     "Walli Air Dome",
+      p4_desc:      "A corporate site built to present large-span membrane solutions, manufacturing strength, and global engineering credibility.",
+      p4_btn:       "View Project",
     },
     workflow: {
       sectionLabel: "Our Process",
@@ -428,6 +432,10 @@ const i18n = {
       p3_title:     "دراغون عمرة",
       p3_desc:      "نموذج خدمة عمرة محلي مبني على التنسيق وتجربة المستخدم والتسليم العملي.",
       p3_btn:       "عرض المشروع",
+      p4_tag:       "عرض القدرات الصناعية",
+      p4_title:     "والي إير دوم",
+      p4_desc:      "موقع تعريفي يبرز حلول الهياكل الغشائية واسعة الامتداد، وقوة التصنيع، والمصداقية الهندسية العالمية.",
+      p4_btn:       "عرض المشروع",
     },
     workflow: {
       sectionLabel: "عمليتنا",

@@ -918,6 +918,7 @@ html[lang="ar"] .sc-3::before { background: linear-gradient(-90deg, var(--accent
 .projects-grid .project-card:nth-child(1) { background: var(--bg-card); }
 .projects-grid .project-card:nth-child(2) { background: var(--bg-card-alt); border-color: rgba(124,115,230,0.11); }
 .projects-grid .project-card:nth-child(3) { background: var(--bg-card-warm); border-color: rgba(230,168,112,0.09); }
+.projects-grid .project-card:nth-child(4) { background: var(--bg-card); border-color: rgba(0,201,167,0.14); }
 
 /* Per-card hover glow */
 .projects-grid .project-card:nth-child(1):hover {
@@ -934,6 +935,11 @@ html[lang="ar"] .sc-3::before { background: linear-gradient(-90deg, var(--accent
   transform: translateY(-7px);
   border-color: rgba(230,168,112,0.32);
   box-shadow: 0 18px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(230,168,112,0.10);
+}
+.projects-grid .project-card:nth-child(4):hover {
+  transform: translateY(-7px);
+  border-color: rgba(0,201,167,0.32);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,201,167,0.09);
 }
 
 /* Image area — visual weight reduced */
@@ -1006,6 +1012,7 @@ html[lang="ar"] .sc-3::before { background: linear-gradient(-90deg, var(--accent
 .projects-grid .project-card:nth-child(1) .project-tag { color: var(--accent-teal); }
 .projects-grid .project-card:nth-child(2) .project-tag { color: var(--accent-indigo); }
 .projects-grid .project-card:nth-child(3) .project-tag { color: var(--accent-warm); }
+.projects-grid .project-card:nth-child(4) .project-tag { color: var(--accent-teal); }
 
 /* Title — main visual focus */
 .project-body h3 {
@@ -1034,6 +1041,11 @@ html[lang="ar"] .sc-3::before { background: linear-gradient(-90deg, var(--accent
 .projects-grid .project-card:nth-child(1) .project-body .btn-ghost { color: var(--accent-teal); }
 .projects-grid .project-card:nth-child(2) .project-body .btn-ghost { color: var(--accent-indigo); }
 .projects-grid .project-card:nth-child(3) .project-body .btn-ghost { color: var(--accent-warm); }
+.projects-grid .project-card:nth-child(4) .project-body .btn-ghost { color: var(--accent-teal); }
+
+@media (min-width: 1025px) {
+  .projects-grid .project-card:nth-child(4) { grid-column: 2; }
+}
 
 /* ============================================================
    10. HOW WE WORK
