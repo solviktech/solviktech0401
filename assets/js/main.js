@@ -17,7 +17,7 @@
   ============================================================ */
   let currentLang = 'en';
 
-  function applyLang(lang) {
+  function applyLang(lang, persist = true) {
     if (!i18n[lang]) return;
     currentLang = lang;
     const t = i18n[lang];
@@ -66,8 +66,10 @@
       btn.classList.toggle('active', isActive);
     });
 
-    /* Persist */
-    try { localStorage.setItem('svt-lang', lang); } catch (e) { /* noop */ }
+    /* Persist only for same-language URL sessions */
+    if (persist) {
+      try { localStorage.setItem('svt-lang', lang); } catch (e) { /* noop */ }
+    }
   }
 
   /* Resolve dot-notation key: "nav.home" → t.nav.home */
@@ -82,11 +84,9 @@
 
   /* Restore saved lang or detect browser preference */
   function initLang() {
-    let saved;
-    try { saved = localStorage.getItem('svt-lang'); } catch (e) { /* noop */ }
-    const preferred = saved || (navigator.language || '').slice(0, 2);
-    const lang = i18n[preferred] ? preferred : 'en';
-    applyLang(lang);
+    const path = window.location.pathname || '';
+    const forcedLang = path.includes('/ar/') ? 'ar' : 'en';
+    applyLang(forcedLang, false);
   }
 
   /* ============================================================
